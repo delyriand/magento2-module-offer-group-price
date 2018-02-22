@@ -51,6 +51,14 @@
         </arguments>
     </type>
 
+    <!-- Add customer group price data in offer -->
+    <type name="Smile\Offer\Model\Product\Indexer\Fulltext\Datasource\OfferData">
+        <plugin name="Smile\RetailerOfferGroupPrice\Plugin\Model\Product\Indexer\Fulltext\Datasource\OfferDataPlugin"
+                type="Smile\RetailerOfferGroupPrice\Plugin\Model\Product\Indexer\Fulltext\Datasource\OfferDataPlugin"
+                sortOrder="10"
+        />
+    </type>
+
     <!-- Add data into UI Component -->
     <type name="Smile\RetailerOffer\Ui\Component\Offer\Form\DataProvider">
         <plugin name="smile_retailer_offer_group_price_add_data" type="Smile\RetailerOfferGroupPrice\Plugin\Ui\Component\Offer\Form\DataProviderPlugin" />

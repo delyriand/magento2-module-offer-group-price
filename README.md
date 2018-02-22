@@ -8,7 +8,7 @@ This module add the ability to define offers price per Retailer Shop and Custome
 * [X] Display price group on listing and product view
 * [ ] Cache ?
 * [X] Use in cart (taxes ?)
-* [ ] Indexing group prices in ES
+* [X] Indexing group prices in ES
 * [ ] Update price filter
 * [ ] update sort by
 * [ ] Tests
