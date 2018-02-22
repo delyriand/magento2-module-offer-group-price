@@ -1,4 +1,4 @@
-# Smile, RetailerOfferGroupPrice
+# Smile, RetailerOfferGroupPrice ![travis build image](https://travis-ci.org/delyriand/magento2-module-offer-group-price.svg?branch=master)
 
 This module add the ability to define offers price per Retailer Shop and Customer Group.
 
