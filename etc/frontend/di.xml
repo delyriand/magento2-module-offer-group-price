@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Module RetailerOfferGroupPrice Frontend Dependency Injection
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this module to newer
+ * versions in the future.
+ *
+ * @category  Smile
+ * @package   Smile\RetailerOfferGroupPrice
+ * @author    Maxime Leclercq <maxime.leclercq@smile.fr>
+ * @copyright 2018 Smile
+ * @license   Open Software License ("OSL") v. 3.0
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Use dedicated price filter model -->
+    <preference for="\Smile\ElasticsuiteCatalog\Model\Layer\Filter\Price" type="Smile\RetailerOfferGroupPrice\Model\Layer\Filter\Price"/>
+
+    <type name="Smile\RetailerOffer\Model\CollectionProcessor">
+        <plugin name="Smile\RetailerOfferGroupPrice\Plugin\Model\CollectionProcessorPlugin"
+                type="Smile\RetailerOfferGroupPrice\Plugin\Model\CollectionProcessorPlugin"
+                sortOrder="20" />
+    </type>
+    <type name="Smile\ElasticsuiteCatalog\Model\ResourceModel\Product\Fulltext\Collection">
+        <plugin name="Smile\RetailerOfferGroupPrice\Plugin\Model\ResourceModel\Product\Fulltext\CollectionPlugin"
+                type="Smile\RetailerOfferGroupPrice\Plugin\Model\ResourceModel\Product\Fulltext\CollectionPlugin"
+                sortOrder="10" />
+    </type>
+
+    <!-- @FIXME Custom CollectionFilter to ensure inventory data is properly filtered on -->
+    <preference for="Smile\RetailerOffer\Api\CollectionProcessorInterface" type="Smile\RetailerOfferGroupPrice\Model\CollectionProcessor"/>
+
+    <!-- @FIXME move this in inventory module -->
+    <!--<type name="Smile\RetailerOffer\Model\CollectionProcessor">-->
+        <!--<plugin name="Smile\RetailerOfferGroupPrice\Plugin\Model\CollectionProcessorPlugin"-->
+                <!--type="Smile\RetailerOfferGroupPrice\Plugin\Model\CollectionProcessorPlugin"-->
+                <!--sortOrder="10" />-->
+    <!--</type>-->
+</config>

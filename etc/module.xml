@@ -3,6 +3,7 @@
     <module name="Smile_RetailerOfferGroupPrice" setup_version="1.0.0">
         <sequence>
             <module name="Smile_RetailerOffer" />
+            <module name="Smile_RetailerOfferInventory" /> <!-- For the moment ... Need offer modules rework -->
         </sequence>
     </module>
 </config>

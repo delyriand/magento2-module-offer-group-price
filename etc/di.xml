@@ -71,4 +71,22 @@
     <type name="Smile\Offer\Model\ResourceModel\Offer\Collection">
         <plugin name="smile_offer_group_price_add_extension_attributes" type="Smile\RetailerOfferGroupPrice\Plugin\OfferCollectionPlugin" />
     </type>
+
+    <!-- @Fixme - Wait elasticsuite 2.5.3 -->
+    <type name="Smile\ElasticsuiteCore\Search\Request\Builder">
+        <arguments>
+            <argument name="aggregationBuilder" xsi:type="object">Smile\RetailerOfferGroupPrice\Search\Request\Aggregation\AggregationBuilder</argument>
+            <argument name="sortOrderBuilder" xsi:type="object">Smile\RetailerOfferGroupPrice\Search\Request\SortOrder\SortOrderBuilder</argument>
+        </arguments>
+    </type>
+    <type name="Smile\ElasticsuiteCatalogOptimizer\Model\Optimizer\Preview\RequestBuilder">
+        <arguments>
+            <argument name="sortOrderBuilder" xsi:type="object">Smile\RetailerOfferGroupPrice\Search\Request\SortOrder\SortOrderBuilder</argument>
+        </arguments>
+    </type>
+
+    <!-- @fixme find a solution for sub-filter -->
+    <type name="Smile\ElasticsuiteCore\Index\Mapping\Field">
+        <plugin name="Smile\RetailerOfferGroupPrice\Plugin\Index\Mapping\FieldPlugin" type="Smile\RetailerOfferGroupPrice\Plugin\Index\Mapping\FieldPlugin" sortOrder="10" />
+    </type>
 </config>
