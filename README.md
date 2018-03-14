@@ -11,5 +11,5 @@ This module add the ability to define offers price per Retailer Shop and Custome
 * [X] Indexing group prices in ES
 * [X] Update price filter
 * [X] update sort by
-* [ ] Check addfilter
+* [X] Check addfilter
 * [ ] Tests

@@ -12,6 +12,7 @@
   "require": {
     "magento/framework": "*",
     "magento/magento-composer-installer": "*",
+    "smile/elasticsuite" : "^2.5.5",
     "smile/module-seller" : "^1.2.0"
   },
   "require-dev": {
