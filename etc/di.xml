@@ -71,4 +71,9 @@
     <type name="Smile\Offer\Model\ResourceModel\Offer\Collection">
         <plugin name="smile_offer_group_price_add_extension_attributes" type="Smile\RetailerOfferGroupPrice\Plugin\OfferCollectionPlugin" />
     </type>
+
+    <!-- Append customer_group filter for price conditon -->
+    <type name="Smile\RetailerOffer\Plugin\Model\Rule\Condition\ProductPlugin">
+        <plugin name="addRetailerOfferGroupFilter" type="Smile\RetailerOfferGroupPrice\Plugin\Plugin\Model\Rule\Condition\ProductPlugin" sortOrder="10"/>
+    </type>
 </config>
